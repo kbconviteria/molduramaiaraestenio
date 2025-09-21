@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KB Conviteria - Moldura Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Tela inicial -->
+  <div id="tela-inicial">
+    <img src="tela-inicial.png" alt="Tela Inicial">
+    <button id="btn-abrir">Toque para abrir</button>
+  </div>
+
+  <!-- Área da moldura -->
+  <div id="app" class="hidden">
+    <div class="camera-container">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+      <img src="moldura.png" id="moldura" class="moldura">
+    </div>
+    <div class="botoes">
+      <button id="btn-foto"><img src="botao-foto.png" alt="Foto"></button>
+      <button id="btn-refazer"><img src="botao-refazer.png" alt="Refazer"></button>
+      <button id="btn-salvar"><img src="botao-salvar.png" alt="Salvar"></button>
+      <button id="btn-trocar"><img src="botao-trocar.png" alt="Trocar câmera"></button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
