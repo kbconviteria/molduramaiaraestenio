@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Moldura Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TELA INICIAL -->
+  <section id="intro" class="screen">
+    <img src="tela-inicial.png" alt="Tela inicial" class="intro-img" />
+    <!-- camada transparente para garantir clique em toda a tela -->
+    <button id="startTap" class="tap-catcher" aria-label="Abrir câmera"></button>
+  </section>
+
+  <!-- CÂMERA -->
+  <section id="camera" class="screen hidden">
+    <video id="video" playsinline muted></video>
+    <img id="overlay" src="moldura.png" alt="" />
+    <button id="btnSwitch" class="icon-btn" aria-label="Trocar câmera"></button>
+
+    <div class="actions">
+      <button id="btnShot"  class="img-btn foto"   aria-label="Foto"></button>
+      <button id="btnSave"  class="img-btn salvar hidden" aria-label="Salvar"></button>
+      <button id="btnRedo"  class="img-btn refazer hidden" aria-label="Refazer"></button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
