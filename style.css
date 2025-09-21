@@ -1,0 +1,57 @@
+:root{
+  --safe-top: env(safe-area-inset-top, 8px);
+  --shoot-bottom: 20vh;
+  --result-bottom: 22vh;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; margin:0; background:#000; color:#fff; font-family:system-ui, Arial, sans-serif; }
+
+/* Barra superior */
+.topbar{
+  position:fixed; inset:0 0 auto 0; height:56px;
+  padding:max(6px, var(--safe-top)) 10px 6px;
+  display:flex; align-items:center; justify-content:space-between;
+  background:linear-gradient(180deg, rgba(0,0,0,.45), transparent);
+  z-index:5; pointer-events:none;
+}
+.spacer{ width:1px; height:1px; }
+.iconimg{ pointer-events:auto; border:0; background:transparent; width:56px; height:56px; background-repeat:no-repeat; background-position:center; background-size:contain; }
+.iconimg.flip{ background-image:url("botao-trocar.png"); }
+
+/* Palco */
+.stage{ position:fixed; inset:0; overflow:hidden; }
+#video{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; background:#000;
+}
+
+/* Moldura PNG opcional (cobre a tela) */
+.overlay{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:contain; pointer-events:none;
+}
+
+/* Botões como imagens */
+.btnimg{
+  width:260px; height:86px;   /* tamanho grande como você pediu */
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  border:0; background-color:transparent;
+}
+.btnimg.foto{    background-image:url("botao-foto.png"); }
+.btnimg.salvar{  background-image:url("botao-salvar.png"); }
+.btnimg.refazer{ background-image:url("botao-refazer.png"); }
+
+/* Áreas de ação (centralizadas) */
+.actions{
+  position:absolute; left:0; right:0;
+  display:flex; gap:36px; justify-content:center; align-items:center;
+  z-index:4;
+}
+#shootArea { bottom: var(--shoot-bottom); }
+#resultArea{ bottom: var(--result-bottom); }
+
+/* util */
+.hidden{ display:none !important; }
