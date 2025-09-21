@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>Foto com Moldura</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Tela inicial -->
+  <section id="start" class="start">
+    <div class="start-bg"></div>
+    <button id="btnStart" class="btnimg abrir" aria-label="Toque para abrir"></button>
+  </section>
+
+  <!-- Barra superior -->
+  <header class="topbar">
+    <div class="spacer"></div>
+    <button id="btnFlip" class="iconimg flip" aria-label="Virar câmera"></button>
+  </header>
+
+  <!-- Área principal -->
+  <main class="stage">
+    <video id="video" autoplay playsinline muted></video>
+
+    <!-- Moldura -->
+    <img id="overlay" class="overlay hidden" src="moldura.png" alt="">
+
+    <!-- Botão tirar foto -->
+    <div id="shootArea" class="actions">
+      <button id="btnShot" class="btnimg foto" aria-label="Foto"></button>
+    </div>
+
+    <!-- Após foto -->
+    <div id="resultArea" class="actions hidden">
+      <button id="btnSave"  class="btnimg salvar" aria-label="Salvar"></button>
+      <button id="btnAgain" class="btnimg refazer" aria-label="Refazer"></button>
+    </div>
+  </main>
+
+  <!-- Canvas final -->
+  <canvas id="canvas" width="1080" height="1920" class="hidden"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
